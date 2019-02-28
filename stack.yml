@@ -2,9 +2,6 @@ version: '3'
 services:
   webrtc-streamer:
     command: -C config.json
-    container_name: webrtc-streamer
-    expose:
-      - "8000"
     image: mpromonet/webrtc-streamer
     networks:
       - web
@@ -20,7 +17,6 @@ services:
       - /opt/webrtc-streamer/config.json:/config.json
 
   traefik:
-    container_name: traefik
     image: traefik:1.5.4
     ports:
       - 80:80

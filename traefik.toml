@@ -15,6 +15,7 @@ defaultEntryPoints = ["https","http"]
 [retry]
 
 [docker]
+swarmMode = true
 endpoint = "unix:///var/run/docker.sock"
 domain = "cameras.puppywood.com"
 watch = true
