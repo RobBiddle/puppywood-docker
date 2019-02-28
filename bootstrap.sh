@@ -12,6 +12,7 @@ sudo groupadd docker
 sudo usermod -aG docker ${USER}
 sudo systemctl enable docker
 cd ~
+rm -rf ~/puppywood-docker
 git clone https://github.com/RobBiddle/puppywood-docker.git
 mkdir -p /opt/webrtc-streamer
 sudo cp ~/puppywood-docker/config.json /opt/webrtc-streamer/config.json
@@ -20,5 +21,5 @@ sudo touch /opt/traefik/acme.json && sudo chmod 600 /opt/traefik/acme.json
 sudo cp ~/puppywood-docker/traefik.toml /opt/traefik/traefik.toml
 chmod +x ~/puppywood-docker/launch.sh
 docker swarm init
-docker network create web
+docker network create web --scope swarm
 . ~/puppywood-docker/launch.sh
