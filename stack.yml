@@ -9,8 +9,6 @@ services:
         delay: 10s
       restart_policy:
         condition: on-failure
-    expose:
-      - "8000"
     image: mpromonet/webrtc-streamer
     networks:
       - web
