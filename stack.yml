@@ -1,0 +1,38 @@
+version: '3'
+services:
+  webrtc-streamer:
+    command: -C config.json
+    container_name: webrtc-streamer
+    expose:
+      - "8000"
+    image: mpromonet/webrtc-streamer
+    networks:
+      - web
+      - default
+    labels:
+      - "traefik.docker.network=web"
+      - "traefik.enable=true"
+      - "traefik.frontend.rule=Host:cameras.puppywood.com"
+      - "traefik.port=8000"
+      - "traefik.protocol=http"
+    restart: always
+    volumes:
+      - /opt/webrtc-streamer/config.json:/config.json
+
+  traefik:
+    container_name: traefik
+    image: traefik:1.5.4
+    ports:
+      - 80:80
+      - 443:443
+    networks:
+      - web
+    restart: always
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /opt/traefik/traefik.toml:/traefik.toml
+      - /opt/traefik/acme.json:/acme.json
+
+networks:
+  web:
+    external: true
