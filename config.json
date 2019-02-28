@@ -1,8 +1,19 @@
 {
-    "urls":{
-        "Indoor Fenced Play": {"video":"rtsp://puppywood:Cam4Pups@puppywood2.dyndns.org:554/cam/realmonitor?channel=2&subtype=1"},
-        "Indoor Fenced Play 2": {"video": "rtsp://puppywood:Cam4Pups@puppywood2.dyndns.org:554/cam/realmonitor?channel=5&subtype=1"}, 
-        "Indoor Private Play": {"video": "rtsp://puppywood:Cam4Pups@puppywood2.dyndns.org:554/cam/realmonitor?channel=6&subtype=1"}, 
-        "Kennels": {"video": "rtsp://puppywood:Cam4Pups@puppywood2.dyndns.org:554/cam/realmonitor?channel=8&subtype=1"}
+    "urls": {
+        "Beechmont": {
+            "Indoor Fenced Play": {
+                "video": "rtsp://puppywood:Cam4Pups@puppywood2.dyndns.org:554/cam/realmonitor?channel=2&subtype=1"
+            },
+            "Indoor Fenced Play 2": {
+                "video": "rtsp://puppywood:Cam4Pups@puppywood2.dyndns.org:554/cam/realmonitor?channel=5&subtype=1"
+            },
+            "Indoor Private Play": {
+                "video": "rtsp://puppywood:Cam4Pups@puppywood2.dyndns.org:554/cam/realmonitor?channel=6&subtype=1"
+            },
+            "Kennels": {
+                "video": "rtsp://puppywood:Cam4Pups@puppywood2.dyndns.org:554/cam/realmonitor?channel=8&subtype=1"
+            }
+        },
+        "Montgomery": {}
     }
 }
