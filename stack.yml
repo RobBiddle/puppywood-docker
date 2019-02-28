@@ -10,17 +10,16 @@ services:
       restart_policy:
         condition: on-failure
       labels:
-        - "traefik.docker.network=web"
-        - "traefik.domain=cameras.puppywood.com"
-        - "traefik.enable=true"
-        - "traefik.frontend.rule=Host:cameras.puppywood.com"
-        - "traefik.port=8000"
-        - "traefik.protocol=http"
+        - traefik.docker.network=web
+        - traefik.backend=webrtc-streamer
+        - traefik.domain=cameras.puppywood.com
+        - traefik.enable=true
+        - traefik.frontend.rule=Host:cameras.puppywood.com
+        - traefik.port=8000
+        - traefik.protocol=http
     image: mpromonet/webrtc-streamer
     networks:
       - web
-    ports:
-      - 8000:8000
     volumes:
       - /opt/webrtc-streamer/config.json:/config.json
 
