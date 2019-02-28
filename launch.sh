@@ -1,4 +1,5 @@
-rm -rf ~/puppywood-docker
+sudo rm -rf ~/puppywood-docker
 git clone https://github.com/RobBiddle/puppywood-docker.git
+chmod +x ~/puppywood-docker/bootstrap.sh
 chmod +x ~/puppywood-docker/launch.sh
 docker stack deploy -c ~/puppywood-docker/stack.yml cameras
