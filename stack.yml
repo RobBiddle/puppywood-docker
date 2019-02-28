@@ -21,7 +21,7 @@ services:
     networks:
       - web
     volumes:
-      - /opt/webrtc-streamer/config.json:./config.json
+      - /opt/webrtc-streamer/config.json:/webrtc-streamer/config.json
 
   traefik:
     deploy:
