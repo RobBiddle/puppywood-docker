@@ -2,6 +2,9 @@ docker stack rm cameras
 sleep 3
 docker network rm web
 sleep 1
+docker stack rm cameras
+sleep 3
+docker network rm web
 sudo rm -rf ~/puppywood-docker
 sleep 1
 git clone https://github.com/RobBiddle/puppywood-docker.git
