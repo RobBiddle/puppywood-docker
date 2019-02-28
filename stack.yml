@@ -19,7 +19,6 @@ services:
       - "traefik.frontend.rule=Host:cameras.puppywood.com"
       - "traefik.port=8000"
       - "traefik.protocol=http"
-    restart: always
     volumes:
       - /opt/webrtc-streamer/config.json:/config.json
 
@@ -37,7 +36,6 @@ services:
       - 443:443
     networks:
       - web
-    restart: always
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - /opt/traefik/traefik.toml:/traefik.toml
