@@ -9,18 +9,18 @@ services:
         delay: 10s
       restart_policy:
         condition: on-failure
+      labels:
+        - "traefik.docker.network=web"
+        - "traefik.domain=cameras.puppywood.com"
+        - "traefik.enable=true"
+        - "traefik.frontend.rule=Host:cameras.puppywood.com"
+        - "traefik.port=8000"
+        - "traefik.protocol=http"
     image: mpromonet/webrtc-streamer
     networks:
       - web
-      - default
     ports:
       - 8000:8000
-    labels:
-      - "traefik.docker.network=web"
-      - "traefik.enable=true"
-      - "traefik.frontend.rule=Host:cameras.puppywood.com"
-      - "traefik.port=8000"
-      - "traefik.protocol=http"
     volumes:
       - /opt/webrtc-streamer/config.json:/config.json
 
@@ -34,8 +34,8 @@ services:
         condition: on-failure
     image: traefik:1.5.4
     ports:
-      - 80:8000
-      - 443:8000
+      - 80:80
+      - 443:443
     networks:
       - web
     volumes:
