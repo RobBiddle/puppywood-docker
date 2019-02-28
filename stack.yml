@@ -1,7 +1,14 @@
-version: '3'
+version: "3"
 services:
   webrtc-streamer:
     command: -C config.json
+    deploy:
+      replicas: 1
+      update_config:
+        parallelism: 1
+        delay: 10s
+      restart_policy:
+        condition: on-failure
     image: mpromonet/webrtc-streamer
     networks:
       - web
@@ -17,6 +24,13 @@ services:
       - /opt/webrtc-streamer/config.json:/config.json
 
   traefik:
+    deploy:
+      replicas: 1
+      update_config:
+        parallelism: 1
+        delay: 10s
+      restart_policy:
+        condition: on-failure
     image: traefik:1.5.4
     ports:
       - 80:80

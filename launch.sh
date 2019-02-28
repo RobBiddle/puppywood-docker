@@ -1,5 +1,5 @@
 docker swarm init
 docker network create web
-docker stack deploy -c stack.yml cameras
+docker stack deploy -c ~/puppywood-docker/stack.yml cameras
 
 
