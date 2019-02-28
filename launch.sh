@@ -10,4 +10,5 @@ chmod +x ~/puppywood-docker/bootstrap.sh
 chmod +x ~/puppywood-docker/launch.sh
 sleep 1
 docker network create web --scope swarm --driver overlay
+sleep 3
 docker stack deploy -c ~/puppywood-docker/stack.yml cameras
