@@ -20,6 +20,7 @@ chmod +x ~/puppywood-docker/launch.sh
 sudo cp ~/puppywood-docker/config.json /opt/webrtc-streamer/config.json
 sudo cp ~/puppywood-docker/config-beechmont.json /opt/webrtc-streamer/config-beechmont.json
 sudo cp ~/puppywood-docker/config-montgomery.json /opt/webrtc-streamer/config-montgomery.json
+sudo cp ~/puppywood-docker/index.html /opt/nginx/index.html
 sleep 1
 docker network create web --scope swarm --driver overlay
 sleep 3

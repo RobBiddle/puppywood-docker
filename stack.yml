@@ -1,27 +1,50 @@
 version: "3"
 services:
-  webrtc-streamer-all:
-    command: -C config.json
-    deploy:
-      replicas: 1
-      update_config:
-        parallelism: 1
-        delay: 10s
-      restart_policy:
-        condition: on-failure
-      labels:
-        - traefik.docker.network=web
-        - traefik.backend=webrtc-streamer
-        - traefik.domain=cameras.puppywood.com
-        - traefik.enable=true
-        - traefik.frontend.rule=Host:cameras.puppywood.com
-        - traefik.port=8000
-        - traefik.protocol=http
-    image: mpromonet/webrtc-streamer
-    networks:
-      - web
-    volumes:
-      - /opt/webrtc-streamer/config.json:/app/config.json
+  nginx:
+  command: -C config.json
+  deploy:
+    replicas: 1
+    update_config:
+      parallelism: 1
+      delay: 10s
+    restart_policy:
+      condition: on-failure
+    labels:
+      - traefik.docker.network=web
+      - traefik.backend=nginx
+      - traefik.domain=cameras.puppywood.com
+      - traefik.enable=true
+      - traefik.frontend.rule=Host:cameras.puppywood.com
+      - traefik.port=80
+      - traefik.protocol=http
+  image: nginx
+  networks:
+    - web
+  volumes:
+    - /opt/nginx/index.html:/usr/share/nginx/html
+
+  # webrtc-streamer-all:
+  #   command: -C config.json
+  #   deploy:
+  #     replicas: 1
+  #     update_config:
+  #       parallelism: 1
+  #       delay: 10s
+  #     restart_policy:
+  #       condition: on-failure
+  #     labels:
+  #       - traefik.docker.network=web
+  #       - traefik.backend=webrtc-streamer
+  #       - traefik.domain=cameras.puppywood.com
+  #       - traefik.enable=true
+  #       - traefik.frontend.rule=Host:cameras.puppywood.com
+  #       - traefik.port=8000
+  #       - traefik.protocol=http
+  #   image: mpromonet/webrtc-streamer
+  #   networks:
+  #     - web
+  #   volumes:
+  #     - /opt/webrtc-streamer/config.json:/app/config.json
 
   webrtc-streamer-montgomery:
     command: -C config.json
