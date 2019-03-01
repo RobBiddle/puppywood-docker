@@ -34,6 +34,7 @@ services:
         - traefik.domain=cameras.puppywood.com
         - traefik.enable=true
         - traefik.frontend.rule=Host:cameras.puppywood.com
+        - traefik.frontend.rule=Host:montgomery.cameras.puppywood.com
         - traefik.port=80
         - traefik.protocol=http
     image: library/nginx
@@ -66,28 +67,28 @@ services:
   #   volumes:
   #     - /opt/webrtc-streamer/config.json:/app/config.json
 
-  webrtc-streamer-montgomery:
-    command: -C config.json
-    deploy:
-      replicas: 1
-      update_config:
-        parallelism: 1
-        delay: 10s
-      restart_policy:
-        condition: on-failure
-      labels:
-        - traefik.docker.network=web
-        - traefik.backend=webrtc-streamer-montgomery
-        - traefik.domain=montgomery.cameras.puppywood.com
-        - traefik.enable=true
-        - traefik.frontend.rule=Host:montgomery.cameras.puppywood.com
-        - traefik.port=8000
-        - traefik.protocol=http
-    image: mpromonet/webrtc-streamer
-    networks:
-      - web
-    volumes:
-      - /opt/webrtc-streamer/config-montgomery.json:/app/config.json
+  # webrtc-streamer-montgomery:
+  #   command: -C config.json
+  #   deploy:
+  #     replicas: 1
+  #     update_config:
+  #       parallelism: 1
+  #       delay: 10s
+  #     restart_policy:
+  #       condition: on-failure
+  #     labels:
+  #       - traefik.docker.network=web
+  #       - traefik.backend=webrtc-streamer-montgomery
+  #       - traefik.domain=montgomery.cameras.puppywood.com
+  #       - traefik.enable=true
+  #       - traefik.frontend.rule=Host:montgomery.cameras.puppywood.com
+  #       - traefik.port=8000
+  #       - traefik.protocol=http
+  #   image: mpromonet/webrtc-streamer
+  #   networks:
+  #     - web
+  #   volumes:
+  #     - /opt/webrtc-streamer/config-montgomery.json:/app/config.json
 
   webrtc-streamer-beechmont:
     command: -C config.json
@@ -123,13 +124,211 @@ services:
       labels:
         - traefik.docker.network=web
         - traefik.backend=mjpeg-montgomery1
-        - traefik.domain=montgomery.cameras.puppywood.com
+        - traefik.domain=montgomery1.cameras.puppywood.com
         - traefik.enable=true
         - traefik.frontend.rule=Host:montgomery1.cameras.puppywood.com
         - traefik.port=8081
         - traefik.protocol=http
     environment:
       MJPEG_URL: "http://cameras1.puppywood.com/axis-cgi/mjpg/video.cgi?resolution=4CIF&camera=1"
+    image: roflmao/docker-mjpeg-proxy
+    networks:
+      - web
+
+  mjpeg-montgomery2:
+    deploy:
+      replicas: 1
+      update_config:
+        parallelism: 1
+        delay: 10s
+      restart_policy:
+        condition: on-failure
+      labels:
+        - traefik.docker.network=web
+        - traefik.backend=mjpeg-montgomery2
+        - traefik.domain=montgomery2.cameras.puppywood.com
+        - traefik.enable=true
+        - traefik.frontend.rule=Host:montgomery2.cameras.puppywood.com
+        - traefik.port=8081
+        - traefik.protocol=http
+    environment:
+      MJPEG_URL: "http://cameras1.puppywood.com/axis-cgi/mjpg/video.cgi?resolution=4CIF&camera=2"
+    image: roflmao/docker-mjpeg-proxy
+    networks:
+      - web
+
+  mjpeg-montgomery3:
+    deploy:
+      replicas: 1
+      update_config:
+        parallelism: 1
+        delay: 10s
+      restart_policy:
+        condition: on-failure
+      labels:
+        - traefik.docker.network=web
+        - traefik.backend=mjpeg-montgomery3
+        - traefik.domain=montgomery3.cameras.puppywood.com
+        - traefik.enable=true
+        - traefik.frontend.rule=Host:montgomery3.cameras.puppywood.com
+        - traefik.port=8081
+        - traefik.protocol=http
+    environment:
+      MJPEG_URL: "http://cameras1.puppywood.com/axis-cgi/mjpg/video.cgi?resolution=4CIF&camera=3"
+    image: roflmao/docker-mjpeg-proxy
+    networks:
+      - web
+
+  mjpeg-montgomery4:
+    deploy:
+      replicas: 1
+      update_config:
+        parallelism: 1
+        delay: 10s
+      restart_policy:
+        condition: on-failure
+      labels:
+        - traefik.docker.network=web
+        - traefik.backend=mjpeg-montgomery4
+        - traefik.domain=montgomery4.cameras.puppywood.com
+        - traefik.enable=true
+        - traefik.frontend.rule=Host:montgomery4.cameras.puppywood.com
+        - traefik.port=8081
+        - traefik.protocol=http
+    environment:
+      MJPEG_URL: "http://cameras1.puppywood.com/axis-cgi/mjpg/video.cgi?resolution=4CIF&camera=4"
+    image: roflmao/docker-mjpeg-proxy
+    networks:
+      - web
+
+  mjpeg-montgomery-quad-1-4:
+    deploy:
+      replicas: 1
+      update_config:
+        parallelism: 1
+        delay: 10s
+      restart_policy:
+        condition: on-failure
+      labels:
+        - traefik.docker.network=web
+        - traefik.backend=mjpeg-montgomery-quad-1-4
+        - traefik.domain=montgomery-quad-1-4.cameras.puppywood.com
+        - traefik.enable=true
+        - traefik.frontend.rule=Host:montgomery-quad-1-4.cameras.puppywood.com
+        - traefik.port=8081
+        - traefik.protocol=http
+    environment:
+      MJPEG_URL: "http://cameras1.puppywood.com/axis-cgi/mjpg/video.cgi?resolution=4CIF&camera=quad"
+    image: roflmao/docker-mjpeg-proxy
+    networks:
+      - web
+
+  mjpeg-montgomery5:
+    deploy:
+      replicas: 1
+      update_config:
+        parallelism: 1
+        delay: 10s
+      restart_policy:
+        condition: on-failure
+      labels:
+        - traefik.docker.network=web
+        - traefik.backend=mjpeg-montgomery5
+        - traefik.domain=montgomery5.cameras.puppywood.com
+        - traefik.enable=true
+        - traefik.frontend.rule=Host:montgomery5.cameras.puppywood.com
+        - traefik.port=8081
+        - traefik.protocol=http
+    environment:
+      MJPEG_URL: "http://cameras1.puppywood.com:81/axis-cgi/mjpg/video.cgi?resolution=4CIF&camera=1"
+    image: roflmao/docker-mjpeg-proxy
+    networks:
+      - web
+
+  mjpeg-montgomery6:
+    deploy:
+      replicas: 1
+      update_config:
+        parallelism: 1
+        delay: 10s
+      restart_policy:
+        condition: on-failure
+      labels:
+        - traefik.docker.network=web
+        - traefik.backend=mjpeg-montgomery6
+        - traefik.domain=montgomery6.cameras.puppywood.com
+        - traefik.enable=true
+        - traefik.frontend.rule=Host:montgomery6.cameras.puppywood.com
+        - traefik.port=8081
+        - traefik.protocol=http
+    environment:
+      MJPEG_URL: "http://cameras1.puppywood.com:81/axis-cgi/mjpg/video.cgi?resolution=4CIF&camera=2"
+    image: roflmao/docker-mjpeg-proxy
+    networks:
+      - web
+
+  mjpeg-montgomery7:
+    deploy:
+      replicas: 1
+      update_config:
+        parallelism: 1
+        delay: 10s
+      restart_policy:
+        condition: on-failure
+      labels:
+        - traefik.docker.network=web
+        - traefik.backend=mjpeg-montgomery7
+        - traefik.domain=montgomery7.cameras.puppywood.com
+        - traefik.enable=true
+        - traefik.frontend.rule=Host:montgomery7.cameras.puppywood.com
+        - traefik.port=8081
+        - traefik.protocol=http
+    environment:
+      MJPEG_URL: "http://cameras1.puppywood.com:81/axis-cgi/mjpg/video.cgi?resolution=4CIF&camera=3"
+    image: roflmao/docker-mjpeg-proxy
+    networks:
+      - web
+
+  mjpeg-montgomery8:
+    deploy:
+      replicas: 1
+      update_config:
+        parallelism: 1
+        delay: 10s
+      restart_policy:
+        condition: on-failure
+      labels:
+        - traefik.docker.network=web
+        - traefik.backend=mjpeg-montgomery8
+        - traefik.domain=montgomery8.cameras.puppywood.com
+        - traefik.enable=true
+        - traefik.frontend.rule=Host:montgomery8.cameras.puppywood.com
+        - traefik.port=8081
+        - traefik.protocol=http
+    environment:
+      MJPEG_URL: "http://cameras1.puppywood.com:81/axis-cgi/mjpg/video.cgi?resolution=4CIF&camera=4"
+    image: roflmao/docker-mjpeg-proxy
+    networks:
+      - web
+
+  mjpeg-montgomery-quad-5-8:
+    deploy:
+      replicas: 1
+      update_config:
+        parallelism: 1
+        delay: 10s
+      restart_policy:
+        condition: on-failure
+      labels:
+        - traefik.docker.network=web
+        - traefik.backend=mjpeg-montgomery-quad-5-8
+        - traefik.domain=montgomery-quad-5-8.cameras.puppywood.com
+        - traefik.enable=true
+        - traefik.frontend.rule=Host:montgomery-quad-5-8.cameras.puppywood.com
+        - traefik.port=8081
+        - traefik.protocol=http
+    environment:
+      MJPEG_URL: "http://cameras1.puppywood.com:81/axis-cgi/mjpg/video.cgi?resolution=4CIF&camera=quad"
     image: roflmao/docker-mjpeg-proxy
     networks:
       - web
