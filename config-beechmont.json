@@ -1,0 +1,28 @@
+{
+    "urls": {
+        "Beechmont Cam1": {
+            "video": "rtsp://cameras2.puppywood.com:555/axis-media/media.amp"
+        },
+        "Beechmont Cam2": {
+            "video": "rtsp://cameras2.puppywood.com:556/axis-media/media.amp"
+        },
+        "Beechmont Cam3": {
+            "video": "rtsp://cameras2.puppywood.com:557/axis-media/media.amp"
+        },
+        "Beechmont Cam4": {
+            "video": "rtsp://cameras2.puppywood.com:558/axis-media/media.amp"
+        },
+        "Beechmont Cam5": {
+            "video": "rtsp://puppywood:Cam4Pups@puppywood2.dyndns.org:554/cam/realmonitor?channel=2&subtype=1"
+        },
+        "Beechmont Cam6": {
+            "video": "rtsp://puppywood:Cam4Pups@puppywood2.dyndns.org:554/cam/realmonitor?channel=5&subtype=1"
+        },
+        "Beechmont Cam7": {
+            "video": "rtsp://puppywood:Cam4Pups@puppywood2.dyndns.org:554/cam/realmonitor?channel=6&subtype=1"
+        },
+        "Beechmont Cam8": {
+            "video": "rtsp://puppywood:Cam4Pups@puppywood2.dyndns.org:554/cam/realmonitor?channel=8&subtype=1"
+        }
+    }
+}
