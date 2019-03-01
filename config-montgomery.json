@@ -1,7 +1,8 @@
 {
     "urls": {
         "Montgomery Cam1": {
-            "video": "rtsp://cameras1.puppywood.com:554/mpeg4/1/media.amp"
+            // "video": "rtsp://cameras1.puppywood.com:554/mpeg4/1/media.amp"
+            "video": "file://puppywood.dyndns.org/axis-cgi/mjpg/video.cgi?resolution=4CIF&camera=1"
         },
         "Montgomery Cam2": {
             "video": "rtsp://cameras1.puppywood.com:554/mpeg4/2/media.amp"
