@@ -1,7 +1,7 @@
 version: "3"
 services:
   nginx:
-    command: nginx
+    command: /usr/share/nginx/html/index.html
     deploy:
       replicas: 1
       update_config:
