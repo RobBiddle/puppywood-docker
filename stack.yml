@@ -41,6 +41,7 @@ services:
     volumes:
       - /opt/nginx/index.html:/usr/share/nginx/html/index.html
       - /opt/nginx/montgomery-cams.html:/usr/share/nginx/html/montgomery-cams.html
+      - /opt/nginx/beechmont-cams.html:/usr/share/nginx/html/beechmont-cams.html
       - /opt/nginx/:/opt/www
 
   # webrtc-streamer-all:
