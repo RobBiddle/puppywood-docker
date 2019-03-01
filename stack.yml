@@ -21,7 +21,7 @@ services:
   networks:
     - web
   volumes:
-    - /opt/nginx/index.html:/usr/share/nginx/html
+    - /opt/nginx/index.html:/usr/share/nginx/html/index.html
 
   # webrtc-streamer-all:
   #   command: -C config.json
