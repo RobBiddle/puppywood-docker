@@ -1,10 +1,10 @@
 docker stop $(docker ps -a -q)
-docker stack rm $(docker ls -a -q)
+docker stack rm $(docker stack ls -a -q)
 docker rm $(docker ps -a -q)
 docker network rm  $(docker network ls -a -q)
 sleep 3
 docker stop $(docker ps -a -q)
-docker stack rm $(docker ls -a -q)
+docker stack rm $(docker stack ls -a -q)
 docker rm $(docker ps -a -q)
 docker network rm  $(docker network ls -a -q)
 sudo rm -rf ~/puppywood-docker
