@@ -17,7 +17,7 @@ services:
       - traefik.frontend.rule=Host:cameras.puppywood.com
       - traefik.port=80
       - traefik.protocol=http
-  image: nginx
+  image: library/nginx
   networks:
     - web
   volumes:
