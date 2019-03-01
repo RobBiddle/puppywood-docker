@@ -16,7 +16,6 @@ services:
         - traefik.enable=true
         - traefik.frontend.rule=Host:cameras.puppywood.com
         - traefik.frontend.rule=Path:/
-        - traefik.frontend.rule=AddPrefix:/?layout=2x16
         - traefik.port=8000
         - traefik.protocol=http
     image: mpromonet/webrtc-streamer
@@ -41,7 +40,6 @@ services:
         - traefik.enable=true
         - traefik.frontend.rule=Host:cameras.puppywood.com
         - traefik.frontend.rule=PathStrip:/montgomery/
-        - traefik.frontend.rule=AddPrefix:/?layout=2x8
         - traefik.port=8000
         - traefik.protocol=http
     image: mpromonet/webrtc-streamer
@@ -66,7 +64,6 @@ services:
         - traefik.enable=true
         - traefik.frontend.rule=Host:cameras.puppywood.com
         - traefik.frontend.rule=PathStrip:/beechmont/
-        - traefik.frontend.rule=AddPrefix:/?layout=2x8
         - traefik.port=8000
         - traefik.protocol=http
     image: mpromonet/webrtc-streamer
