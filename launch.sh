@@ -17,6 +17,7 @@ git clone https://github.com/RobBiddle/puppywood-docker.git
 sleep 1
 chmod +x ~/puppywood-docker/bootstrap.sh
 chmod +x ~/puppywood-docker/launch.sh
+sudo cp ~/puppywood-docker/config.json /opt/webrtc-streamer/config.json
 sleep 1
 docker network create web --scope swarm --driver overlay
 sleep 3
