@@ -25,28 +25,28 @@
             "video": "rtsp://puppywood:Cam4Pups@puppywood2.dyndns.org:554/cam/realmonitor?channel=8&subtype=1"
         },
         "Montgomery Cam1": {
-            "video": "rtsp://cameras1.puppywood.com:554/mpeg4/1/media.amp/"
+            "video": "rtsp://cameras1.puppywood.com:554/mpeg4/1/media.amp"
         },
         "Montgomery Cam2": {
-            "video": "rtsp://cameras1.puppywood.com:554/mpeg4/2/media.amp/"
+            "video": "rtsp://cameras1.puppywood.com:554/mpeg4/2/media.amp"
         },
         "Montgomery Cam3": {
-            "video": "rtsp://cameras1.puppywood.com:554/mpeg4/3/media.amp/"
+            "video": "rtsp://cameras1.puppywood.com:554/mpeg4/3/media.amp"
         },
         "Montgomery Cam4": {
-            "video": "rtsp://cameras1.puppywood.com:554/mpeg4/4/media.amp/"
+            "video": "rtsp://cameras1.puppywood.com:554/mpeg4/4/media.amp"
         },
         "Montgomery Cam5": {
-            "video": "rtsp://cameras1.puppywood.com:555/mpeg4/1/media.amp/"
+            "video": "rtsp://cameras1.puppywood.com:555/mpeg4/1/media.amp"
         },
         "Montgomery Cam6": {
-            "video": "rtsp://cameras1.puppywood.com:555/mpeg4/2/media.amp/"
+            "video": "rtsp://cameras1.puppywood.com:555/mpeg4/2/media.amp"
         },
         "Montgomery Cam7": {
-            "video": "rtsp://cameras1.puppywood.com:555/mpeg4/3/media.amp/"
+            "video": "rtsp://cameras1.puppywood.com:555/mpeg4/3/media.amp"
         },
         "Montgomery Cam8": {
-            "video": "rtsp://cameras1.puppywood.com:554/mpeg4/4/media.amp/"
+            "video": "rtsp://cameras1.puppywood.com:554/mpeg4/4/media.amp"
         }
     }
 }
