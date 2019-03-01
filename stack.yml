@@ -20,7 +20,6 @@ services:
       - /opt/traefik/acme.json:/acme.json
 
   nginx:
-    # command:
     deploy:
       replicas: 1
       update_config:
@@ -34,7 +33,6 @@ services:
         - traefik.domain=cameras.puppywood.com
         - traefik.enable=true
         - traefik.frontend.rule=Host:cameras.puppywood.com
-        - traefik.frontend.rule=Host:montgomery.cameras.puppywood.com
         - traefik.port=80
         - traefik.protocol=http
     image: library/nginx
@@ -42,6 +40,7 @@ services:
       - web
     volumes:
       - /opt/nginx/index.html:/usr/share/nginx/html/index.html
+      - /opt/nginx/montgomery-cams.html:/usr/share/nginx/html/montgomery-cams.html
       - /opt/nginx/:/opt/www
 
   # webrtc-streamer-all:
