@@ -1,12 +1,12 @@
 docker stop $(docker ps -a -q)
 docker rm $(docker ps -a -q)
 docker stack rm cameras
-docker network rm  $(docker network ls -q)
+docker network rm web
 sleep 3
 docker stop $(docker ps -a -q)
 docker rm $(docker ps -a -q)
 docker stack rm cameras
-docker network rm  $(docker network ls -q)
+docker network rm web
 sudo rm -rf ~/puppywood-docker
 sleep 1
 git clone https://github.com/RobBiddle/puppywood-docker.git
