@@ -31,3 +31,4 @@ onHostRule = true
 
 [[acme.domains]]
   main = "cameras.puppywood.com"
+  sans = ["beechmont.cameras.puppywood.com", "montgomery,cameras.puppywood.com"]
