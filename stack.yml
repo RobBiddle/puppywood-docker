@@ -35,9 +35,9 @@ services:
       labels:
         - traefik.docker.network=web
         - traefik.backend=webrtc-streamer-montgomery
-        - traefik.domain=cameras.puppywood.com
+        # - traefik.domain=cameras.puppywood.com
         - traefik.enable=true
-        - traefik.frontend.rule=Host:cameras.puppywood.com
+        # - traefik.frontend.rule=Host:cameras.puppywood.com
         - traefik.frontend.rule=PathPrefixStrip:/montgomery/
         - traefik.port=8000
         - traefik.protocol=http
