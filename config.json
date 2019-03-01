@@ -1,52 +1,56 @@
 {
     "urls": {
-        "Beechmont Cam1": {
-            "video": "rtsp://cameras2.puppywood.com:555/axis-media/media.amp"
+        "Beechmont": {
+            "Indoor Fenced Play": {
+                "video": "rtsp://puppywood:Cam4Pups@puppywood2.dyndns.org:554/cam/realmonitor?channel=2&subtype=1"
+            },
+            "Indoor Fenced Play 2": {
+                "video": "rtsp://puppywood:Cam4Pups@puppywood2.dyndns.org:554/cam/realmonitor?channel=5&subtype=1"
+            },
+            "Indoor Private Play": {
+                "video": "rtsp://puppywood:Cam4Pups@puppywood2.dyndns.org:554/cam/realmonitor?channel=6&subtype=1"
+            },
+            "Kennels": {
+                "video": "rtsp://puppywood:Cam4Pups@puppywood2.dyndns.org:554/cam/realmonitor?channel=8&subtype=1"
+            },
+            "Cam1": {
+                "video": "rtsp://cameras2.puppywood.com:555/axis-media/media.amp"
+            },
+            "Cam2": {
+                "video": "rtsp://cameras2.puppywood.com:556/axis-media/media.amp"
+            },
+            "Cam3": {
+                "video": "rtsp://cameras2.puppywood.com:557/axis-media/media.amp"
+            },
+            "Cam4": {
+                "video": "rtsp://cameras2.puppywood.com:558/axis-media/media.amp"
+            }
         },
-        "Beechmont Cam2": {
-            "video": "rtsp://cameras2.puppywood.com:556/axis-media/media.amp"
-        },
-        "Beechmont Cam3": {
-            "video": "rtsp://cameras2.puppywood.com:557/axis-media/media.amp"
-        },
-        "Beechmont Cam4": {
-            "video": "rtsp://cameras2.puppywood.com:558/axis-media/media.amp"
-        },
-        "Beechmont Cam5": {
-            "video": "rtsp://puppywood:Cam4Pups@puppywood2.dyndns.org:554/cam/realmonitor?channel=2&subtype=1"
-        },
-        "Beechmont Cam6": {
-            "video": "rtsp://puppywood:Cam4Pups@puppywood2.dyndns.org:554/cam/realmonitor?channel=5&subtype=1"
-        },
-        "Beechmont Cam7": {
-            "video": "rtsp://puppywood:Cam4Pups@puppywood2.dyndns.org:554/cam/realmonitor?channel=6&subtype=1"
-        },
-        "Beechmont Cam8": {
-            "video": "rtsp://puppywood:Cam4Pups@puppywood2.dyndns.org:554/cam/realmonitor?channel=8&subtype=1"
-        },
-        "Montgomery Cam1": {
-            "video": "rtsp://cameras1.puppywood.com:554/mpeg4/1/media.amp/"
-        },
-        "Montgomery Cam2": {
-            "video": "rtsp://cameras1.puppywood.com:554/mpeg4/2/media.amp/"
-        },
-        "Montgomery Cam3": {
-            "video": "rtsp://cameras1.puppywood.com:554/mpeg4/3/media.amp/"
-        },
-        "Montgomery Cam4": {
-            "video": "rtsp://cameras1.puppywood.com:554/mpeg4/4/media.amp/"
-        },
-        "Montgomery Cam5": {
-            "video": "rtsp://cameras1.puppywood.com:555/mpeg4/1/media.amp/"
-        },
-        "Montgomery Cam6": {
-            "video": "rtsp://cameras1.puppywood.com:555/mpeg4/2/media.amp/"
-        },
-        "Montgomery Cam7": {
-            "video": "rtsp://cameras1.puppywood.com:555/mpeg4/3/media.amp/"
-        },
-        "Montgomery Cam8": {
-            "video": "rtsp://cameras1.puppywood.com:554/mpeg4/4/media.amp/"
+        "Montgomery": {
+            "Cam1": {
+                "video": "rtsp://cameras1.puppywood.com:554/mpeg4/1/media.amp/"
+            },
+            "Cam2": {
+                "video": "rtsp://cameras1.puppywood.com:554/mpeg4/2/media.amp/"
+            },
+            "Cam3": {
+                "video": "rtsp://cameras1.puppywood.com:554/mpeg4/3/media.amp/"
+            },
+            "Cam4": {
+                "video": "rtsp://cameras1.puppywood.com:554/mpeg4/4/media.amp/"
+            },
+            "Cam5": {
+                "video": "rtsp://cameras1.puppywood.com:555/mpeg4/1/media.amp/"
+            },
+            "Cam6": {
+                "video": "rtsp://cameras1.puppywood.com:555/mpeg4/2/media.amp/"
+            },
+            "Cam7": {
+                "video": "rtsp://cameras1.puppywood.com:555/mpeg4/3/media.amp/"
+            },
+            "Cam8": {
+                "video": "rtsp://cameras1.puppywood.com:554/mpeg4/4/media.amp/"
+            }
         }
     }
 }
