@@ -15,7 +15,6 @@ services:
         - traefik.domain=cameras.puppywood.com
         - traefik.enable=true
         - traefik.frontend.rule=Host:cameras.puppywood.com
-        - traefik.frontend.rule=Path:/
         - traefik.port=8000
         - traefik.protocol=http
     image: mpromonet/webrtc-streamer
