@@ -20,7 +20,7 @@ sudo mkdir -p /opt/webrtc-streamer
 sudo cp ~/puppywood-docker/config.json /opt/webrtc-streamer/config.json
 sudo mkdir -p /opt/traefik
 sudo touch /opt/traefik/acme.json && sudo chmod 600 /opt/traefik/acme.json
-mkdir -p /opt/nginx
+sudo mkdir -p /opt/nginx
 sudo sudo touch /opt/nginx/index.html
 sudo cp ~/puppywood-docker/traefik.toml /opt/traefik/traefik.toml
 docker swarm init
