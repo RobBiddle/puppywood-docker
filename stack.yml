@@ -24,7 +24,7 @@ services:
       replicas: 1
       update_config:
         parallelism: 1
-        delay: 10s
+        delay: 5s
       restart_policy:
         condition: on-failure
       labels:
@@ -118,7 +118,7 @@ services:
       replicas: 1
       update_config:
         parallelism: 1
-        delay: 10s
+        delay: 12s
       restart_policy:
         condition: on-failure
       labels:
@@ -140,7 +140,7 @@ services:
       replicas: 1
       update_config:
         parallelism: 1
-        delay: 10s
+        delay: 13s
       restart_policy:
         condition: on-failure
       labels:
@@ -162,7 +162,7 @@ services:
       replicas: 1
       update_config:
         parallelism: 1
-        delay: 10s
+        delay: 14s
       restart_policy:
         condition: on-failure
       labels:
@@ -184,7 +184,7 @@ services:
       replicas: 1
       update_config:
         parallelism: 1
-        delay: 10s
+        delay: 15s
       restart_policy:
         condition: on-failure
       labels:
@@ -228,7 +228,7 @@ services:
       replicas: 1
       update_config:
         parallelism: 1
-        delay: 10s
+        delay: 16s
       restart_policy:
         condition: on-failure
       labels:
@@ -250,7 +250,7 @@ services:
       replicas: 1
       update_config:
         parallelism: 1
-        delay: 10s
+        delay: 17s
       restart_policy:
         condition: on-failure
       labels:
@@ -272,7 +272,7 @@ services:
       replicas: 1
       update_config:
         parallelism: 1
-        delay: 10s
+        delay: 18s
       restart_policy:
         condition: on-failure
       labels:
@@ -294,7 +294,7 @@ services:
       replicas: 1
       update_config:
         parallelism: 1
-        delay: 10s
+        delay: 19s
       restart_policy:
         condition: on-failure
       labels:
