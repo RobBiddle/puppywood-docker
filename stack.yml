@@ -201,27 +201,27 @@ services:
     networks:
       - web
 
-  mjpeg-montgomery-quad-1-4:
-    deploy:
-      replicas: 1
-      update_config:
-        parallelism: 1
-        delay: 10s
-      restart_policy:
-        condition: on-failure
-      labels:
-        - traefik.docker.network=web
-        - traefik.backend=mjpeg-montgomery-quad-1-4
-        - traefik.domain=montgomery-quad-1-4.cameras.puppywood.com
-        - traefik.enable=true
-        - traefik.frontend.rule=Host:montgomery-quad-1-4.cameras.puppywood.com
-        - traefik.port=8081
-        - traefik.protocol=http
-    environment:
-      MJPEG_URL: "http://cameras1.puppywood.com/axis-cgi/mjpg/video.cgi?resolution=4CIF&camera=quad"
-    image: roflmao/docker-mjpeg-proxy
-    networks:
-      - web
+  # mjpeg-montgomery-quad-1-4:
+  #   deploy:
+  #     replicas: 1
+  #     update_config:
+  #       parallelism: 1
+  #       delay: 10s
+  #     restart_policy:
+  #       condition: on-failure
+  #     labels:
+  #       - traefik.docker.network=web
+  #       - traefik.backend=mjpeg-montgomery-quad-1-4
+  #       - traefik.domain=montgomery-quad-1-4.cameras.puppywood.com
+  #       - traefik.enable=true
+  #       - traefik.frontend.rule=Host:montgomery-quad-1-4.cameras.puppywood.com
+  #       - traefik.port=8081
+  #       - traefik.protocol=http
+  #   environment:
+  #     MJPEG_URL: "http://cameras1.puppywood.com/axis-cgi/mjpg/video.cgi?resolution=4CIF&camera=quad"
+  #   image: roflmao/docker-mjpeg-proxy
+  #   networks:
+  #     - web
 
   mjpeg-montgomery5:
     deploy:
@@ -311,27 +311,27 @@ services:
     networks:
       - web
 
-  mjpeg-montgomery-quad-5-8:
-    deploy:
-      replicas: 1
-      update_config:
-        parallelism: 1
-        delay: 10s
-      restart_policy:
-        condition: on-failure
-      labels:
-        - traefik.docker.network=web
-        - traefik.backend=mjpeg-montgomery-quad-5-8
-        - traefik.domain=montgomery-quad-5-8.cameras.puppywood.com
-        - traefik.enable=true
-        - traefik.frontend.rule=Host:montgomery-quad-5-8.cameras.puppywood.com
-        - traefik.port=8081
-        - traefik.protocol=http
-    environment:
-      MJPEG_URL: "http://cameras1.puppywood.com:81/axis-cgi/mjpg/video.cgi?resolution=4CIF&camera=quad"
-    image: roflmao/docker-mjpeg-proxy
-    networks:
-      - web
+  # mjpeg-montgomery-quad-5-8:
+  #   deploy:
+  #     replicas: 1
+  #     update_config:
+  #       parallelism: 1
+  #       delay: 10s
+  #     restart_policy:
+  #       condition: on-failure
+  #     labels:
+  #       - traefik.docker.network=web
+  #       - traefik.backend=mjpeg-montgomery-quad-5-8
+  #       - traefik.domain=montgomery-quad-5-8.cameras.puppywood.com
+  #       - traefik.enable=true
+  #       - traefik.frontend.rule=Host:montgomery-quad-5-8.cameras.puppywood.com
+  #       - traefik.port=8081
+  #       - traefik.protocol=http
+  #   environment:
+  #     MJPEG_URL: "http://cameras1.puppywood.com:81/axis-cgi/mjpg/video.cgi?resolution=4CIF&camera=quad"
+  #   image: roflmao/docker-mjpeg-proxy
+  #   networks:
+  #     - web
 
 networks:
   web:
