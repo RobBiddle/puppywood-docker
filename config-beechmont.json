@@ -20,9 +20,6 @@
         },
         "Beechmont Cam7": {
             "video": "rtsp://puppywood:Cam4Pups@puppywood2.dyndns.org:554/cam/realmonitor?channel=6&subtype=1"
-        },
-        "Beechmont Cam8": {
-            "video": "rtsp://puppywood:Cam4Pups@puppywood2.dyndns.org:554/cam/realmonitor?channel=8&subtype=1"
         }
     }
 }
