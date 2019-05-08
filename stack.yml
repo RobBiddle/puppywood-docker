@@ -5,7 +5,7 @@ services:
       replicas: 1
       update_config:
         parallelism: 1
-        delay: 3s
+        delay: 10s
       restart_policy:
         condition: on-failure
     image: traefik:1.5.4
@@ -18,31 +18,6 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
       - /opt/traefik/traefik.toml:/traefik.toml
       - /opt/traefik/acme.json:/acme.json
-
-  nginx:
-    deploy:
-      replicas: 1
-      update_config:
-        parallelism: 1
-        delay: 5s
-      restart_policy:
-        condition: on-failure
-      labels:
-        - traefik.docker.network=web
-        - traefik.backend=nginx
-        - traefik.domain=cameras.puppywood.com
-        - traefik.enable=true
-        - traefik.frontend.rule=Host:cameras.puppywood.com
-        - traefik.port=80
-        - traefik.protocol=http
-    image: library/nginx
-    networks:
-      - web
-    volumes:
-      - /opt/nginx/index.html:/usr/share/nginx/html/index.html
-      - /opt/nginx/montgomery-cams.html:/usr/share/nginx/html/montgomery-cams.html
-      - /opt/nginx/beechmont-cams.html:/usr/share/nginx/html/beechmont-cams.html
-      - /opt/nginx/:/opt/www
 
   # webrtc-streamer-all:
   #   command: -C config.json
@@ -96,7 +71,7 @@ services:
       replicas: 1
       update_config:
         parallelism: 1
-        delay: 10s
+        delay: 20s
       restart_policy:
         condition: on-failure
       labels:
@@ -118,7 +93,7 @@ services:
       replicas: 1
       update_config:
         parallelism: 1
-        delay: 12s
+        delay: 22s
       restart_policy:
         condition: on-failure
       labels:
@@ -140,7 +115,7 @@ services:
       replicas: 1
       update_config:
         parallelism: 1
-        delay: 13s
+        delay: 23s
       restart_policy:
         condition: on-failure
       labels:
@@ -162,7 +137,7 @@ services:
       replicas: 1
       update_config:
         parallelism: 1
-        delay: 14s
+        delay: 24s
       restart_policy:
         condition: on-failure
       labels:
@@ -184,7 +159,7 @@ services:
       replicas: 1
       update_config:
         parallelism: 1
-        delay: 15s
+        delay: 25s
       restart_policy:
         condition: on-failure
       labels:
@@ -228,7 +203,7 @@ services:
       replicas: 1
       update_config:
         parallelism: 1
-        delay: 16s
+        delay: 26s
       restart_policy:
         condition: on-failure
       labels:
@@ -250,7 +225,7 @@ services:
       replicas: 1
       update_config:
         parallelism: 1
-        delay: 17s
+        delay: 27s
       restart_policy:
         condition: on-failure
       labels:
@@ -272,7 +247,7 @@ services:
       replicas: 1
       update_config:
         parallelism: 1
-        delay: 18s
+        delay: 28s
       restart_policy:
         condition: on-failure
       labels:
@@ -294,7 +269,7 @@ services:
       replicas: 1
       update_config:
         parallelism: 1
-        delay: 19s
+        delay: 29s
       restart_policy:
         condition: on-failure
       labels:
@@ -332,6 +307,31 @@ services:
   #   image: roflmao/docker-mjpeg-proxy
   #   networks:
   #     - web
+
+  nginx:
+    deploy:
+      replicas: 1
+      update_config:
+        parallelism: 1
+        delay: 35s
+      restart_policy:
+        condition: on-failure
+      labels:
+        - traefik.docker.network=web
+        - traefik.backend=nginx
+        - traefik.domain=cameras.puppywood.com
+        - traefik.enable=true
+        - traefik.frontend.rule=Host:cameras.puppywood.com
+        - traefik.port=80
+        - traefik.protocol=http
+    image: library/nginx
+    networks:
+      - web
+    volumes:
+      - /opt/nginx/index.html:/usr/share/nginx/html/index.html
+      - /opt/nginx/montgomery-cams.html:/usr/share/nginx/html/montgomery-cams.html
+      - /opt/nginx/beechmont-cams.html:/usr/share/nginx/html/beechmont-cams.html
+      - /opt/nginx/:/opt/www
 
 networks:
   web:
