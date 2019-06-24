@@ -8,6 +8,7 @@ docker rm $(docker ps -a -q)
 docker stack rm cameras
 docker network rm web
 sudo rm -rf ~/puppywood-docker
+docker image prune -f
 sleep 1
 git clone https://github.com/RobBiddle/puppywood-docker.git
 sleep 1
