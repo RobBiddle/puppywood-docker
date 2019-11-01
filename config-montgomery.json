@@ -1,28 +1,25 @@
 {
     "urls": {
         "Montgomery Cam1": {
-            "video": "http://cameras1.puppywood.com/axis-cgi/mjpg/video.cgi?resolution=4CIF&camera=1"
+            "video": "rtsp://cameras1.puppywood.com:7447/hEVxNyd91Y7m8SwA"
         },
         "Montgomery Cam2": {
-            "video": "http://cameras1.puppywood.com/axis-cgi/mjpg/video.cgi?resolution=4CIF&camera=2"
+            "video": "rtsp://cameras1.puppywood.com:7447/prScfjaN6pE2JWVq"
         },
         "Montgomery Cam3": {
-            "video": "http://cameras1.puppywood.com/axis-cgi/mjpg/video.cgi?resolution=4CIF&camera=3"
+            "video": "rtsp://cameras1.puppywood.com:7447/UeIR2EUAgDQGs6u0"
         },
         "Montgomery Cam4": {
-            "video": "http://cameras1.puppywood.com/axis-cgi/mjpg/video.cgi?resolution=4CIF&camera=4"
+            "video": "rtsp://cameras1.puppywood.com:7447/kw39yopvBeRFCKgu"
         },
         "Montgomery Cam5": {
-            "video": "http://cameras1.puppywood.com:81/axis-cgi/mjpg/video.cgi?resolution=4CIF&camera=1"
+            "video": "rtsp://cameras1.puppywood.com:7447/SqiPXSdsbwEdszDY"
         },
         "Montgomery Cam6": {
-            "video": "http://cameras1.puppywood.com:81/axis-cgi/mjpg/video.cgi?resolution=4CIF&camera=2"
+            "video": "rtsp://cameras1.puppywood.com:7447/6KqCXrmBFvsmVS5q"
         },
         "Montgomery Cam7": {
-            "video": "http://cameras1.puppywood.com:81/axis-cgi/mjpg/video.cgi?resolution=4CIF&camera=3"
-        },
-        "Montgomery Cam8": {
-            "video": "http://cameras1.puppywood.com:81/axis-cgi/mjpg/video.cgi?resolution=4CIF&camera=4"
+            "video": "rtsp://cameras1.puppywood.com:7447/E7zwwwKioAx4G1Ap"
         }
     }
 }
