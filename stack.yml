@@ -1,4 +1,8 @@
 version: "3"
+
+networks:
+  web:
+
 services:
   traefik:
     deploy:
@@ -8,7 +12,7 @@ services:
         delay: 3s
       restart_policy:
         condition: on-failure
-    image: traefik:1.5.4
+    image: traefik:1.7.24
     ports:
       - 80:80
       - 443:443
@@ -29,7 +33,7 @@ services:
   #     restart_policy:
   #       condition: on-failure
   #     labels:
-  #       - traefik.docker.network=web
+  #       - traefik.docker.network=cameras_web
   #       - traefik.backend=webrtc-streamer
   #       - traefik.domain=cameras.puppywood.com
   #       - traefik.enable=true
@@ -52,7 +56,7 @@ services:
       restart_policy:
         condition: on-failure
       labels:
-        - traefik.docker.network=web
+        - traefik.docker.network=cameras_web
         - traefik.backend=webrtc-streamer-montgomery
         - traefik.domain=montgomery.cameras.puppywood.com
         - traefik.enable=true
@@ -75,7 +79,7 @@ services:
       restart_policy:
         condition: on-failure
       labels:
-        - traefik.docker.network=web
+        - traefik.docker.network=cameras_web
         - traefik.backend=webrtc-streamer-beechmont
         - traefik.domain=beechmont.cameras.puppywood.com
         - traefik.enable=true
@@ -97,7 +101,7 @@ services:
   #     restart_policy:
   #       condition: on-failure
   #     labels:
-  #       - traefik.docker.network=web
+  #       - traefik.docker.network=cameras_web
   #       - traefik.backend=mjpeg-montgomery1
   #       - traefik.domain=montgomery1.cameras.puppywood.com
   #       - traefik.enable=true
@@ -119,7 +123,7 @@ services:
   #     restart_policy:
   #       condition: on-failure
   #     labels:
-  #       - traefik.docker.network=web
+  #       - traefik.docker.network=cameras_web
   #       - traefik.backend=mjpeg-montgomery2
   #       - traefik.domain=montgomery2.cameras.puppywood.com
   #       - traefik.enable=true
@@ -141,7 +145,7 @@ services:
   #     restart_policy:
   #       condition: on-failure
   #     labels:
-  #       - traefik.docker.network=web
+  #       - traefik.docker.network=cameras_web
   #       - traefik.backend=mjpeg-montgomery3
   #       - traefik.domain=montgomery3.cameras.puppywood.com
   #       - traefik.enable=true
@@ -163,7 +167,7 @@ services:
   #     restart_policy:
   #       condition: on-failure
   #     labels:
-  #       - traefik.docker.network=web
+  #       - traefik.docker.network=cameras_web
   #       - traefik.backend=mjpeg-montgomery4
   #       - traefik.domain=montgomery4.cameras.puppywood.com
   #       - traefik.enable=true
@@ -185,7 +189,7 @@ services:
   # #     restart_policy:
   # #       condition: on-failure
   # #     labels:
-  # #       - traefik.docker.network=web
+  # #       - traefik.docker.network=cameras_web
   # #       - traefik.backend=mjpeg-montgomery-quad-1-4
   # #       - traefik.domain=montgomery-quad-1-4.cameras.puppywood.com
   # #       - traefik.enable=true
@@ -207,7 +211,7 @@ services:
   #     restart_policy:
   #       condition: on-failure
   #     labels:
-  #       - traefik.docker.network=web
+  #       - traefik.docker.network=cameras_web
   #       - traefik.backend=mjpeg-montgomery5
   #       - traefik.domain=montgomery5.cameras.puppywood.com
   #       - traefik.enable=true
@@ -229,7 +233,7 @@ services:
   #     restart_policy:
   #       condition: on-failure
   #     labels:
-  #       - traefik.docker.network=web
+  #       - traefik.docker.network=cameras_web
   #       - traefik.backend=mjpeg-montgomery6
   #       - traefik.domain=montgomery6.cameras.puppywood.com
   #       - traefik.enable=true
@@ -251,7 +255,7 @@ services:
   #     restart_policy:
   #       condition: on-failure
   #     labels:
-  #       - traefik.docker.network=web
+  #       - traefik.docker.network=cameras_web
   #       - traefik.backend=mjpeg-montgomery7
   #       - traefik.domain=montgomery7.cameras.puppywood.com
   #       - traefik.enable=true
@@ -273,7 +277,7 @@ services:
   #     restart_policy:
   #       condition: on-failure
   #     labels:
-  #       - traefik.docker.network=web
+  #       - traefik.docker.network=cameras_web
   #       - traefik.backend=mjpeg-montgomery8
   #       - traefik.domain=montgomery8.cameras.puppywood.com
   #       - traefik.enable=true
@@ -295,7 +299,7 @@ services:
   # #     restart_policy:
   # #       condition: on-failure
   # #     labels:
-  # #       - traefik.docker.network=web
+  # #       - traefik.docker.network=cameras_web
   # #       - traefik.backend=mjpeg-montgomery-quad-5-8
   # #       - traefik.domain=montgomery-quad-5-8.cameras.puppywood.com
   # #       - traefik.enable=true
@@ -317,7 +321,7 @@ services:
       restart_policy:
         condition: on-failure
       labels:
-        - traefik.docker.network=web
+        - traefik.docker.network=cameras_web
         - traefik.backend=nginx
         - traefik.domain=cameras.puppywood.com
         - traefik.enable=true
@@ -332,7 +336,3 @@ services:
       - /opt/nginx/montgomery-cams.html:/usr/share/nginx/html/montgomery-cams.html
       - /opt/nginx/beechmont-cams.html:/usr/share/nginx/html/beechmont-cams.html
       - /opt/nginx/:/opt/www
-
-networks:
-  web:
-    external: true

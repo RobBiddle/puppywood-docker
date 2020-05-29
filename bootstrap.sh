@@ -24,5 +24,4 @@ sudo mkdir -p /opt/nginx
 sudo sudo touch /opt/nginx/index.html
 sudo cp ~/puppywood-docker/traefik.toml /opt/traefik/traefik.toml
 docker swarm init
-docker network create web --scope swarm
 . ~/puppywood-docker/launch.sh
