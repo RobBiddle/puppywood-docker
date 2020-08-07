@@ -31,4 +31,4 @@ onHostRule = true
 
 [[acme.domains]]
   main = "cameras.puppywood.com"
-  sans = ["beechmont.cameras.puppywood.com", "montgomery.cameras.puppywood.com", "montgomery1.cameras.puppywood.com", "montgomery2.cameras.puppywood.com", "montgomery3.cameras.puppywood.com", "montgomery4.cameras.puppywood.com", "montgomery5.cameras.puppywood.com", "montgomery6.cameras.puppywood.com", "montgomery7.cameras.puppywood.com", "montgomery9.cameras.puppywood.com" ]
+  sans = ["beechmont.cameras.puppywood.com", "montgomery.cameras.puppywood.com"]
