@@ -1,5 +1,6 @@
 docker stack rm cameras
 sleep 5
+cd /home/ubuntu
 sudo rm -rf ~/puppywood-docker
 docker image prune -f
 sleep 1
