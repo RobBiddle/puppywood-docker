@@ -24,7 +24,7 @@ services:
       - /opt/traefik/acme.json:/acme.json
 
   webrtc-streamer-montgomery:
-    command: -C config.json
+    command: -C config.json -a
     deploy:
       replicas: 1
       update_config:
@@ -47,7 +47,7 @@ services:
       - /opt/webrtc-streamer/config-montgomery.json:/app/config.json
 
   webrtc-streamer-beechmont:
-    command: -C config.json
+    command: -C config.json -a
     deploy:
       replicas: 1
       update_config:
